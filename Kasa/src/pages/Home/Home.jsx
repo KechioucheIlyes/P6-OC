@@ -4,10 +4,10 @@ import "../../style/Home/Home.css"
 import { Cards } from "../../components/Location-Cards/Cards";
 
 export function Home(){
-
+    const title = "Chez vous, Partout et ailleurs"
     return(
         <div>
-            <Presentation picture={pictureMontagne} />
+            <Presentation picture={pictureMontagne} text={title}/>
             <div className="card-container">
                 <Cards/>
                 <Cards/>

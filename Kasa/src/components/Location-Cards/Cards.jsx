@@ -1,5 +1,5 @@
 import styled from "styled-components"
-
+import '../../style/Cards/Cards.css'
 
 export function Cards() { 
     
@@ -13,7 +13,11 @@ export function Cards() {
     `
     return (
         
-        <StyledCard></StyledCard>
+        <StyledCard> 
+            <div className="location-title" >
+                <p>Titre de la location</p>
+            </div>
+        </StyledCard>
             
         
     )
