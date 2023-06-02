@@ -4,7 +4,6 @@ import '../../style/Cards/Cards.css'
 export function Cards() { 
     
     const StyledCard = styled.div`
-        border: 1px solid black;
         width : 340px;
         height:340px;
         border-radius: 10px;
