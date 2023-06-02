@@ -1,0 +1,12 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.navbar-container ul {
+  display: flex;
+}
+.navbar-container ul li {
+  list-style: none;
+}/*# sourceMappingURL=NavBar.css.map */
