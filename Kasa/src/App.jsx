@@ -7,7 +7,8 @@ import { Propos } from "./pages/À Propos/Propos"
 import { Footer } from "./components/Footer/Footer"
 import { Error } from "./pages/Error/Error"
 import backgroundPng from "./assets/Background.png"
-import { Caroussel } from "./components/Carroussel/Carousel"
+import { FicheLogement } from "./pages/Fiche-Logement/FicheLogement"
+
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/propos" element={<Propos/>} />
-        <Route path="/fiche-logement/:locationId" element={<Caroussel />} />
+        <Route path="/fiche-logement/:locationId" element={<FicheLogement/>} />
         <Route path="*"  element={ <Error/> }/>
       </Routes>
       <Footer/>
