@@ -1,0 +1,9 @@
+.infos-cards-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.infos-cards-container .host-container {
+  display: flex;
+  flex-direction: row-reverse;
+}/*# sourceMappingURL=InfosCards.css.map */
