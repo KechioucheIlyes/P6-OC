@@ -13,7 +13,15 @@ export function FicheLogement (){
 
     return (<div>
         <Caroussel picture={filtredElement.map((el => el.cover))} />
-        <InfosCards title={filtredElement.map((el)=>el.title)} location={filtredElement.map(el => el.location)}/>
+        <InfosCards 
+            title={filtredElement.map((el)=>el.title)} 
+            location={filtredElement.map(el => el.location)} 
+            hostPicture={filtredElement.map(el => el.host.picture)} 
+            hostName={filtredElement.map(el => el.host.name)} 
+            
+            
+            
+            />
     </div>
     )
 }
