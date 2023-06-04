@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/propos" element={<Propos/>} />
-        <Route path="/test" element={<Caroussel pictures={backgroundPng}/>} />
+        <Route path="/fiche-logement/:locationId" element={<Caroussel />} />
         <Route path="*"  element={ <Error/> }/>
       </Routes>
       <Footer/>
