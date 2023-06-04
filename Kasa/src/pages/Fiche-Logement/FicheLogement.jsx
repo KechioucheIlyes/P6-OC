@@ -26,7 +26,8 @@ export function FicheLogement (){
     const filtredElement = dataLogement.filter(el => el.id === locationId)
 
     console.log(filtredElement)
-
+    
+    
 
     return (<div>
         {filtredElement.map((el)=>{
@@ -46,6 +47,12 @@ export function FicheLogement (){
                     {el.tags.map(tag => <StyledTags>{tag}</StyledTags>)}
                 
                 </StyledTagsContainer>
+                <div >
+
+                    <Collapse name={"Description"} content={el.description} />
+                    <Collapse name={"Équipements"} content={el.equipments} />
+                
+                </div>
 
                 
             </div>
