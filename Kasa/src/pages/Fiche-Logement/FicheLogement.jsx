@@ -4,6 +4,7 @@ import { dataLogement } from "../../utils/DataLogement/DataLogement";
 import { InfosCards } from "../../components/InfosCards/InfosCards";
 import styled from "styled-components";
 import { Collapse } from "../../components/Collapse/Collapse";
+import { Stars } from "../../components/Stars/Stars";
 
 
 const StyledTags = styled.div`
@@ -13,12 +14,25 @@ const StyledTags = styled.div`
     border-radius : 10px; 
     width: fit-content;
     padding: 3px 41px 2px 40px;
-    margin-left: 10px;
-`
-const StyledTagsContainer = styled.div`
-    display: flex;
+    margin-right: 10px;
+
+    
     
 `
+const StyledTagsContainer = styled.div`
+
+    display: flex;
+    
+
+`
+const StyledCollapse = styled.div`
+    display: flex;
+    
+    justify-content : space-between;
+    
+`
+
+
 
 export function FicheLogement (){
     const {locationId} =useParams()
@@ -33,8 +47,10 @@ export function FicheLogement (){
         {filtredElement.map((el)=>{
             return (
             <div>
+                
+                    
                 <Caroussel picture= {el.cover} />
-            
+                
                 <InfosCards 
                 title={(el.title)} 
                 location={(el.location)} 
@@ -42,17 +58,25 @@ export function FicheLogement (){
                 hostName={(el.host.name)} 
                 />
 
+                <Stars rating={el.rating}/>
                 <StyledTagsContainer className="tags-container">
                     
                     {el.tags.map(tag => <StyledTags>{tag}</StyledTags>)}
+
+                
                 
                 </StyledTagsContainer>
-                <div >
 
-                    <Collapse name={"Description"} content={el.description} />
-                    <Collapse name={"Équipements"} content={el.equipments} />
+                <StyledCollapse >
+                    
+                        
+                        <Collapse name={"Description"} content={el.description} width={"500px"} />
+                        
+                    
+                        <Collapse name={"Équipements"} content={el.equipments} width={"500px"} />
+                    
                 
-                </div>
+                </StyledCollapse>
 
                 
             </div>

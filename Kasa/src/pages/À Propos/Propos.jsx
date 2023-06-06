@@ -5,11 +5,14 @@ import { dataOfCollapse } from "../../utils/CollsapseData/CollaspeData";
 export function Propos(){
     
     return(
-        <div >
+        <div  >
             <Presentation picture={foret} />
-            {dataOfCollapse.map((element, index)=>{
-                return <Collapse key={`${element.name} - ${index}`} name={element.name} content={element.content}/>
-            })}
+            <div className="colapse-container">
+                {dataOfCollapse.map((element, index)=>{
+                    
+                    return  <Collapse key={`${element.name} - ${index}`} name={element.name} content={element.content}/> 
+                })}
+            </div>
         </div>
         
 
