@@ -27,7 +27,6 @@ const StyledTagsContainer = styled.div`
 `
 const StyledCollapse = styled.div`
     display: flex;
-    
     justify-content : space-between;
     
 `
@@ -57,7 +56,7 @@ export function FicheLogement (){
                 title={(el.title)} 
                 location={(el.location)} 
                 hostPicture={(el.host.picture)} 
-                hostName={(el.host.name)} 
+                hostName={(el.host.name)}
                 
                 />
 
