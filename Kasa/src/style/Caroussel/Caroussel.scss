@@ -13,3 +13,39 @@
 
     }
 }
+
+@media screen and (max-width : 768px) {
+    .caroussel-pictures {
+        height: 255px !important;
+
+        .crawler-pics {
+            top: 100px;
+        }
+    }
+
+    .infos-cards-container {
+        h1 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        img {
+            height: 32px;
+        }
+    }
+
+    .tags-stars-container {
+        flex-direction: column;
+
+        img {
+            height: 13px;
+            position: relative;
+            top: 15px;
+        }
+
+
+    }
+}

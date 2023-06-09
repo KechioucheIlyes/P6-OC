@@ -28,6 +28,7 @@ const StyledTagsContainer = styled.div`
 const StyledCollapse = styled.div`
     display: flex;
     justify-content : space-between;
+    border: 1px solid black;
     
 `
 
@@ -53,6 +54,7 @@ export function FicheLogement (){
                 <Caroussel picture= {el.cover}  tableOfPictures={el.pictures}/>
                 
                 <InfosCards 
+                
                 title={(el.title)} 
                 location={(el.location)} 
                 hostPicture={(el.host.picture)} 
@@ -64,25 +66,31 @@ export function FicheLogement (){
                     
                 <StyledTagsContainer className="tags-container">
                     
-                    {el.tags.map(tag => <StyledTags>{tag}</StyledTags>)}
+                    {el.tags.map(tag => <StyledTags className="tags">{tag}</StyledTags>)}
 
-                    
-                
-                
+
                 </StyledTagsContainer>
                 <Stars rating={el.rating}/>
 
                 </div>
                 
 
-                <StyledCollapse >
+                <StyledCollapse  className="forSee">
                     
                         
-                        <Collapse name={"Description"} content={el.description} width={"500px"} />
+                        <Collapse  name={"Description"} content={el.description} width={"500px"}  >
+                            
+                        </Collapse>
                         
                     
-                        <Collapse name={"Équipements"} content={el.equipments} width={"500px"} />
-                    
+                        <Collapse name={"Équipements"}  width={"500px"} >
+                            <ul>
+                                {el.equipments.map((equipement)=>{
+                                    return <li>{equipement}</li>
+                                })}
+                            </ul>
+                        </Collapse>
+                        
                 
                 </StyledCollapse>
 

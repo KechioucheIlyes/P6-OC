@@ -1,4 +1,21 @@
 .colapse-container {
-  width: 1023px;
+  width: 80%;
   margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .colapse-container img {
+    height: 10px;
+    position: relative;
+    top: 5px;
+  }
+  .tes {
+    padding: 10px, 0px, 10px, 10px !important;
+    width: auto !important;
+    display: flex;
+    align-items: center;
+  }
+  .tes img {
+    height: 9px;
+  }
 }/*# sourceMappingURL=Collapse.css.map */

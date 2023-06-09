@@ -27,7 +27,7 @@ const StyledCollapseInfos = styled.div`
     color: rgba(255, 96, 96, 1);
     width : ${props => props.widthinfos ? props.widthinfos : 'auto' };
 `
-export function Collapse({name, content , width}){
+export function Collapse({name, content , width , children}){
     const [vectorUp , setVectorUp] = useState(true)
     
     
@@ -36,12 +36,12 @@ export function Collapse({name, content , width}){
     
     return(
         <div >
-            <StyledCollapse  width={width} >
+            <StyledCollapse className="tes" width={width} >
                 {name}
                 {vectorUp ? <img onClick={() => {setVectorUp(!vectorUp)}} src={vector} alt="vecteur-up"></img> : <img onClick={() => {setVectorUp(!vectorUp)}} src={vectDown} alt="vecteur down"></img>}
             </StyledCollapse> 
-            {vectorUp ? null : <StyledCollapseInfos widthinfos={width} >
-                {content}
+            {vectorUp ? null : <StyledCollapseInfos className="tes" widthinfos={width} >
+                <div >{content} {children}</div>
             </StyledCollapseInfos> } 
             
             

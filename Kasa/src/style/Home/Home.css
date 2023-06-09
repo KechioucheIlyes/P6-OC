@@ -4,4 +4,12 @@
   margin-top: 45px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .card-container {
+    background-color: white;
+    margin-top: 0px;
+  }
 }/*# sourceMappingURL=Home.css.map */

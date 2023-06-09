@@ -12,13 +12,16 @@
 @media screen and (max-width : 768px) {
     .formobs {
         width: fit-content;
-        height: 455px !important;
-        border: 1px solid black;
 
+
+        margin: 0 !important;
+        margin-top: 20px !important;
     }
 
     .img-card {
         width: 335px !important;
+
+
     }
 }
 

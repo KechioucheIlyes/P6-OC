@@ -18,8 +18,6 @@ const StyledCard = styled.div`
         background: url(${props => props.BG}) no-repeat center center;
         background-size: cover;
         position:absolute;
-        
-        
 
     `
     const StyledText = styled.div`
@@ -43,7 +41,7 @@ export function Cards({pictures , title , id  }) {
         <>
             
             <StyledCard className="formobs card-dark"> 
-            <Link to={`/fiche-logement/${locationId}`}><StyledImg  BG={pictures}></StyledImg></Link>
+            <Link to={`/fiche-logement/${locationId}`}><StyledImg className="img-card"  BG={pictures}></StyledImg></Link>
                 <StyledText>{title ? title : null}</StyledText>
                 
             </StyledCard>

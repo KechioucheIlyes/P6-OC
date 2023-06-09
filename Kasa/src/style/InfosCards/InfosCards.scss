@@ -17,3 +17,14 @@
         }
     }
 }
+
+@media screen and (max-width : 768px) {
+    .infos-cards-container {
+        .host-container {
+            position: relative;
+            top: 85px;
+            align-items: center;
+
+        }
+    }
+}

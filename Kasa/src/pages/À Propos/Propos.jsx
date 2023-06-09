@@ -4,6 +4,7 @@ import { Collapse } from "../../components/Collapse/Collapse";
 import { dataOfCollapse } from "../../utils/CollsapseData/CollaspeData";
 export function Propos(){
     
+    
     return(
         <div  >
             <Presentation picture={foret} />

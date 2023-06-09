@@ -1,4 +1,4 @@
-import {BrowserRouter as Router , Routes , Route} from "react-router-dom"
+import {BrowserRouter as Router , Routes , Route, Link} from "react-router-dom"
 import { NavBar } from "./components/NavBar/NavBar"
 
 
@@ -8,6 +8,7 @@ import { Footer } from "./components/Footer/Footer"
 import { Error } from "./pages/Error/Error"
 import backgroundPng from "./assets/Background.png"
 import { FicheLogement } from "./pages/Fiche-Logement/FicheLogement"
+import styled from "styled-components"
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
   
   return (
     <Router>
-      <NavBar/>
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/propos" element={<Propos/>} />

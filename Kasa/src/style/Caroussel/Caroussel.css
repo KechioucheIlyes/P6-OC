@@ -9,4 +9,30 @@
 }
 .caroussel-pictures h1 {
   color: whitesmoke;
+}
+
+@media screen and (max-width: 768px) {
+  .caroussel-pictures {
+    height: 255px !important;
+  }
+  .caroussel-pictures .crawler-pics {
+    top: 100px;
+  }
+  .infos-cards-container h1 {
+    font-size: 18px;
+  }
+  .infos-cards-container p {
+    font-size: 14px;
+  }
+  .infos-cards-container img {
+    height: 32px;
+  }
+  .tags-stars-container {
+    flex-direction: column;
+  }
+  .tags-stars-container img {
+    height: 13px;
+    position: relative;
+    top: 15px;
+  }
 }/*# sourceMappingURL=Caroussel.css.map */

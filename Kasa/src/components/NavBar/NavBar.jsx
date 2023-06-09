@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import logo from "../../assets/logo-kasa/LOGO.png"
 import "../../style/Navbar/NavBar.css"
 import styled from "styled-components"
+import { useEffect, useState } from "react"
 
 const LinkStyled = styled(Link)`
         color: #fe605f;
@@ -12,7 +13,8 @@ const LinkStyled = styled(Link)`
     `
 export function NavBar () { 
     
-
+    
+    
     return(
         <header>
             <div className="navbar-container">
@@ -23,6 +25,8 @@ export function NavBar () {
                     <ul>
                         <li><LinkStyled to={"/"} $focused>Acceuil</LinkStyled></li>
                         <li><LinkStyled to={"/propos"}>À Propos</LinkStyled></li>
+                        
+                        
                     </ul>
                 </nav>
             </div>

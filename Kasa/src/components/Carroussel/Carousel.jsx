@@ -36,7 +36,7 @@ const StyledCrawlerPictures = styled.div`
 export function Caroussel({picture , tableOfPictures }){
     
     
-    const title ="HELLO"
+    
     const [index , setIndex] = useState(0)
 
     const handleIndexNext = ()=>{
@@ -56,8 +56,7 @@ export function Caroussel({picture , tableOfPictures }){
             <StyledImg BgImages={PictureOfIndex} className="caroussel-pictures"> 
             <StyledPrevious onClick={()=>{handleIndexPrevious()}}  src={previousVector} alt="previous"></StyledPrevious>
             <StyledNext onClick={()=>{handleIndexNext()}} src={nextVector} alt="next"></StyledNext>
-            {title}
-            <StyledCrawlerPictures>{`${index}/${(tableOfPictures.length)-1}`}</StyledCrawlerPictures>
+            <StyledCrawlerPictures className="crawler-pics">{`${index}/${(tableOfPictures.length)-1}`}</StyledCrawlerPictures>
             </StyledImg>
             
             
