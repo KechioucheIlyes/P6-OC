@@ -6,4 +6,11 @@
 .infos-cards-container .host-container {
   display: flex;
   flex-direction: row-reverse;
+}
+.infos-cards-container .host-container .person-and-rating-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
 }/*# sourceMappingURL=InfosCards.css.map */

@@ -1,5 +1,10 @@
 import coloredStar from "../../assets/Stars/Colored-Star/star.svg"
 import uncoloredStar from "../../assets/Stars/Uncolored-Star/star.svg"
+import styled from "styled-components"
+
+const StyledStar = styled.img`
+    margin-right : 10px;
+`
 export function Stars({rating}){
     
     const range = [1, 2 , 3 ,4 ,5]
@@ -7,11 +12,11 @@ export function Stars({rating}){
     return( 
         <div>
             {range.map((element)=>
-                rating >= element ? <img src={coloredStar} alt="star"></img> : null
+                rating >= element ? <StyledStar src={coloredStar} alt="star"></StyledStar> : null
                 
             )}{
                     range.map((element => 
-                        numberOfUncoloredStars >= element ? <img src={uncoloredStar} alt="star"></img> : null
+                        numberOfUncoloredStars >= element ? <StyledStar src={uncoloredStar}  alt="star"></StyledStar> : null
                         )) 
                     }
         </div>

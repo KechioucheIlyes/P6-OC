@@ -6,5 +6,14 @@
     .host-container {
         display: flex;
         flex-direction: row-reverse;
+
+        .person-and-rating-container {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+        }
     }
 }

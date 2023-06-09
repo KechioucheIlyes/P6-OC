@@ -1,3 +1,8 @@
 .testt {
   border: 1px solid black;
+}
+
+.tags-stars-container {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=FicheLogement.css.map */

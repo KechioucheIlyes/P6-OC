@@ -5,7 +5,7 @@ import { InfosCards } from "../../components/InfosCards/InfosCards";
 import styled from "styled-components";
 import { Collapse } from "../../components/Collapse/Collapse";
 import { Stars } from "../../components/Stars/Stars";
-
+import '../../style/FicheLogement.scss'
 
 const StyledTags = styled.div`
     color: white;
@@ -46,7 +46,9 @@ export function FicheLogement (){
     return (<div>
         {filtredElement.map((el)=>{
             return (
-            <div>
+                <div>
+                    
+                <div>
                 
                     
                 <Caroussel picture= {el.cover} />
@@ -56,16 +58,23 @@ export function FicheLogement (){
                 location={(el.location)} 
                 hostPicture={(el.host.picture)} 
                 hostName={(el.host.name)} 
+                
                 />
 
-                <Stars rating={el.rating}/>
+                <div className="tags-stars-container">
+                    
                 <StyledTagsContainer className="tags-container">
                     
                     {el.tags.map(tag => <StyledTags>{tag}</StyledTags>)}
 
+                    
                 
                 
                 </StyledTagsContainer>
+                <Stars rating={el.rating}/>
+
+                </div>
+                
 
                 <StyledCollapse >
                     
@@ -80,6 +89,10 @@ export function FicheLogement (){
 
                 
             </div>
+
+                </div>
+                
+            
             
             )
             
