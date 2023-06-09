@@ -8,7 +8,7 @@ const StyledCard = styled.div`
         width : 340px;
         height:340px;
         border-radius: 10px;
-        background: linear-gradient(to bottom ,#FF6060 , rgba(0, 0 , 0 , 0.7) );
+        
         margin: 56px 50px 50px 50px ;
     `
     const StyledImg = styled.img`
@@ -31,7 +31,7 @@ export function Cards({pictures , title , id  }) {
         <>
             
             <StyledCard className="formobs"> 
-            <Link to={`/fiche-logement/${locationId}`}><StyledImg onClick={()=>{setIds(id)}} BG={pictures}></StyledImg></Link>
+            <Link to={`/fiche-logement/${locationId}`}><StyledImg className="img-card" onClick={()=>{setIds(id)}} BG={pictures}></StyledImg></Link>
                 {title}
                 {ids ? ids : null}
             </StyledCard>

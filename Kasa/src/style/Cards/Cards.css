@@ -9,7 +9,12 @@
 
 @media screen and (max-width: 768px) {
   .formobs {
-    width: 335px;
-    height: 255px;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 455px !important;
+    border: 1px solid black;
+  }
+  .img-card {
+    width: 335px !important;
   }
 }/*# sourceMappingURL=Cards.css.map */
