@@ -13,12 +13,12 @@ const StyledImg = styled.div`
 
 const StyledNext = styled.img`
     position : relative;
-    left : 600px;
+    left : 45%;
     cursor: pointer;
 `
 const StyledPrevious = styled.img`
     position : relative;
-    right : 600px;
+    right : 40%;
     cursor: pointer;
 `
 const StyledCrawlerPictures = styled.div`
@@ -29,7 +29,7 @@ const StyledCrawlerPictures = styled.div`
     top : 180px;
     display : flex;
     justify-content: center;
-    right: 45px;
+    
     
 
 `
@@ -54,8 +54,8 @@ export function Caroussel({picture , tableOfPictures }){
     return (
         <div>
             <StyledImg BgImages={PictureOfIndex} className="caroussel-pictures"> 
-            <StyledPrevious onClick={()=>{handleIndexPrevious()}}  src={previousVector} alt="previous"></StyledPrevious>
-            <StyledNext onClick={()=>{handleIndexNext()}} src={nextVector} alt="next"></StyledNext>
+            <StyledPrevious className="vector-previous" onClick={()=>{handleIndexPrevious()}}  src={previousVector} alt="previous"></StyledPrevious>
+            <StyledNext className="vector-next" onClick={()=>{handleIndexNext()}} src={nextVector} alt="next"></StyledNext>
             <StyledCrawlerPictures className="crawler-pics">{`${index}/${(tableOfPictures.length)-1}`}</StyledCrawlerPictures>
             </StyledImg>
             

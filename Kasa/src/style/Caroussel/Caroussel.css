@@ -18,6 +18,12 @@
   .caroussel-pictures .crawler-pics {
     top: 100px;
   }
+  .caroussel-pictures .vector-next {
+    height: 19px !important;
+  }
+  .caroussel-pictures .vector-previous {
+    height: 19px !important;
+  }
   .infos-cards-container h1 {
     font-size: 18px;
   }
