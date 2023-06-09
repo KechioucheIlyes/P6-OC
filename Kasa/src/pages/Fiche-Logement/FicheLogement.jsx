@@ -50,7 +50,7 @@ export function FicheLogement (){
                 <div>
                 
                     
-                <Caroussel picture= {el.cover} />
+                <Caroussel picture= {el.cover}  tableOfPictures={el.pictures}/>
                 
                 <InfosCards 
                 title={(el.title)} 

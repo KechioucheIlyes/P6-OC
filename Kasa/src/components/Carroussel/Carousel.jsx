@@ -8,8 +8,7 @@ import { useState } from "react"
 const StyledImg = styled.div`
     background: url(${props => props.BgImages}) no-repeat center center; 
     background-size : cover;
-    background-color: rgba(0, 0, 0, 0.7);
-
+    
     `
 
 const StyledNext = styled.img`
@@ -22,18 +21,46 @@ const StyledPrevious = styled.img`
     right : 600px;
     cursor: pointer;
 `
-export function Caroussel({picture }){
-
+const StyledCrawlerPictures = styled.div`
+    color: white;
+    font-weight:500;
+    font-size:18px;
+    position: relative;
+    top : 180px;
+    display : flex;
+    justify-content: center;
+    right: 45px;
     
-    const [next , setNext] = useState()
+
+`
+export function Caroussel({picture , tableOfPictures }){
+    
+    
+    const title ="HELLO"
+    const [index , setIndex] = useState(0)
+
+    const handleIndexNext = ()=>{
+        setIndex( index < (tableOfPictures.length)-1 ? index +1 : 0  )
+    }
+
+    const handleIndexPrevious = () =>{
+        setIndex( index-1 <0 ? (tableOfPictures.length)-1 : index-1)
+    }
+    setTimeout(()=>{
+        setIndex( index < (tableOfPictures.length)-1 ? index +1 : 0  ) 
+    },3000)
+    let PictureOfIndex = tableOfPictures[index]
 
     return (
         <div>
-            <StyledImg BgImages={picture} className="caroussel-pictures"> 
-            <StyledPrevious src={previousVector} alt="previous"></StyledPrevious>
-            <StyledNext src={nextVector} alt="next"></StyledNext>
-                
+            <StyledImg BgImages={PictureOfIndex} className="caroussel-pictures"> 
+            <StyledPrevious onClick={()=>{handleIndexPrevious()}}  src={previousVector} alt="previous"></StyledPrevious>
+            <StyledNext onClick={()=>{handleIndexNext()}} src={nextVector} alt="next"></StyledNext>
+            {title}
+            <StyledCrawlerPictures>{`${index}/${(tableOfPictures.length)-1}`}</StyledCrawlerPictures>
             </StyledImg>
+            
+            
             
         </div>
     )
