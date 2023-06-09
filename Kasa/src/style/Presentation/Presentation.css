@@ -9,4 +9,10 @@
 }
 .presentation-picture h1 {
   color: whitesmoke;
+}
+
+@media screen and (max-width: 768px) {
+  .presentation-picture {
+    height: 111px;
+  }
 }/*# sourceMappingURL=Presentation.css.map */

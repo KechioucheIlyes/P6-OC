@@ -9,4 +9,13 @@
 }
 .navbar-container ul li {
   list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+  img {
+    height: 46px;
+  }
+  ul li a {
+    font-size: 12px !important;
+  }
 }/*# sourceMappingURL=NavBar.css.map */

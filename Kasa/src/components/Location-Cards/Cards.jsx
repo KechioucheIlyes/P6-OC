@@ -30,7 +30,7 @@ export function Cards({pictures , title , id  }) {
     return (
         <>
             
-            <StyledCard> 
+            <StyledCard className="formobs"> 
             <Link to={`/fiche-logement/${locationId}`}><StyledImg onClick={()=>{setIds(id)}} BG={pictures}></StyledImg></Link>
                 {title}
                 {ids ? ids : null}
