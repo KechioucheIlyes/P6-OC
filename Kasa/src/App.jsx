@@ -12,7 +12,7 @@ import { FicheLogement } from "./pages/Fiche-Logement/FicheLogement"
 
 function App() {
 
-
+  
   return (
     <Router>
       <NavBar/>

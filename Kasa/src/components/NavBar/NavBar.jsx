@@ -13,8 +13,6 @@ const LinkStyled = styled(Link)`
 export function NavBar () { 
     
 
-    
-
     return(
         <header>
             <div className="navbar-container">
