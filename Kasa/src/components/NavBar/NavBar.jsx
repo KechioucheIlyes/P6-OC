@@ -22,7 +22,7 @@ export function NavBar () {
                 <img src={logo} alt="logo-Kasa" />
                 
                 <nav>
-                    <ul>
+                    <ul className="nav-ul">
                         <li><LinkStyled to={"/"} $focused>Accueil</LinkStyled></li>
                         <li><LinkStyled to={"/propos"}>À Propos</LinkStyled></li>
                         

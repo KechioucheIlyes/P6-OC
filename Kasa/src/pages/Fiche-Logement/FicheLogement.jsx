@@ -70,12 +70,12 @@ export function FicheLogement (){
                 <StyledCollapse  className="forSee">
                     
                         
-                        <Collapse  name={"Description"} content={el.description} width={"500px"}  >
+                        <Collapse  name={"Description"} content={el.description} width={"90%"}  >
                             
                         </Collapse>
                         
                     
-                        <Collapse name={"Équipements"}  width={"500px"} >
+                        <Collapse name={"Équipements"}  width={"90%"} >
                             <ul className="collapsed-ul">
                                 {el.equipments.map((equipement)=>{
                                     return <li>{equipement}</li>

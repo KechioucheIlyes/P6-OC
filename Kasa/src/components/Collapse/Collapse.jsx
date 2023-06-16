@@ -18,8 +18,13 @@
     width: ${props => props.width ? props.width : 'auto'};
     border: 1px solid black;
     @media screen and (max-width : 768px){
-    width: 85%;
-
+    min-width: 82%;
+    max-width : 150px;
+    img {
+            position: relative;
+            top: 5px;
+            height: 9px;
+        }
     }
     `;
     const StyledCollapseInfos = styled.div`
@@ -32,12 +37,20 @@
     color: rgba(255, 96, 96, 1);
     width : ${props => props.widthinfos ? props.widthinfos : 'auto' };
     @media screen and (max-width : 768px){
-    width: 100%;
-    border: 2px solid blue;
+        min-width: 82%;
+        max-width : 150px;
+        border: 2px solid blue;
+        
 
 
     }
 
+    `
+    const StyledContainer = styled.div`
+     width : ${props => props.widthinfos ? props.widthinfos : 'auto' };
+     @media screen and (max-width : 768px){
+        width : 100%;
+     }
     `
     export function Collapse({name, content , width , children}){
     const [vectorUp , setVectorUp] = useState(true)
@@ -47,7 +60,7 @@
 
 
     return(
-        <div >
+        <StyledContainer widthinfos={width} >
             <StyledCollapse  width={width} >
                 {name}
                 {vectorUp ? <img onClick={() => {setVectorUp(!vectorUp)}} src={vector} alt="vecteur-up"></img> : <img onClick={() => {setVectorUp(!vectorUp)}} src={vectDown} alt="vecteur down"></img>}
@@ -57,7 +70,7 @@
             </StyledCollapseInfos> } 
             
             
-        </div>
+        </StyledContainer>
 
     )
     }

@@ -15,12 +15,12 @@
   img {
     height: 36px;
   }
-  ul {
+  .nav-ul {
     display: flex;
     border: 1px solid blue;
-    padding: 0px;
+    padding: 0;
   }
-  ul li a {
+  .nav-ul li a {
     font-size: 10px !important;
   }
 }/*# sourceMappingURL=NavBar.css.map */
