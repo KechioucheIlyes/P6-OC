@@ -4,6 +4,10 @@ import styled from "styled-components"
 
 const StyledStar = styled.img`
     margin-right : 10px;
+    
+    @media screen and (max-width : 768px){
+        height : 10px !important;
+    }
 `
 export function Stars({rating}){
     

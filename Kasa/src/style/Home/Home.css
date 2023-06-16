@@ -5,11 +5,24 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  min-width: 320px;
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
   .card-container {
     background-color: white;
-    margin-top: 0px;
+    border-radius: initial;
+    margin-top: initial;
+    display: initial;
+    flex-wrap: initial;
+    justify-content: initial;
+    min-width: initial;
   }
 }/*# sourceMappingURL=Home.css.map */

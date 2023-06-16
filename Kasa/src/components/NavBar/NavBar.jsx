@@ -23,7 +23,7 @@ export function NavBar () {
                 
                 <nav>
                     <ul>
-                        <li><LinkStyled to={"/"} $focused>Acceuil</LinkStyled></li>
+                        <li><LinkStyled to={"/"} $focused>Accueil</LinkStyled></li>
                         <li><LinkStyled to={"/propos"}>À Propos</LinkStyled></li>
                         
                         

@@ -13,9 +13,14 @@
 
 @media screen and (max-width: 768px) {
   img {
-    height: 46px;
+    height: 36px;
+  }
+  ul {
+    display: flex;
+    border: 1px solid blue;
+    padding: 0px;
   }
   ul li a {
-    font-size: 12px !important;
+    font-size: 10px !important;
   }
 }/*# sourceMappingURL=NavBar.css.map */

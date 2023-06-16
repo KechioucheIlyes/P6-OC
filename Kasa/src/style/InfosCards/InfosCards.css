@@ -16,9 +16,22 @@
 }
 
 @media screen and (max-width: 768px) {
-  .infos-cards-container .host-container {
-    position: relative;
-    top: 85px;
+  .infos-cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .infos-cards-container .Host-star-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  .infos-cards-container .Host-star-container .host-container {
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
 }/*# sourceMappingURL=InfosCards.css.map */

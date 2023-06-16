@@ -19,12 +19,7 @@ const StyledTags = styled.div`
     
     
 `
-const StyledTagsContainer = styled.div`
 
-    display: flex;
-    
-
-`
 const StyledCollapse = styled.div`
     display: flex;
     justify-content : space-between;
@@ -43,7 +38,7 @@ export function FicheLogement (){
     
     
 
-    return (<div>
+    return (<main>
         {filtredElement.map((el)=>{
             return (
                 <div>
@@ -59,18 +54,15 @@ export function FicheLogement (){
                 location={(el.location)} 
                 hostPicture={(el.host.picture)} 
                 hostName={(el.host.name)}
-                
+                stars = {el.rating}
+                tags = {el.tags.map(tag => <StyledTags className="tags">{tag}</StyledTags>)}
+
                 />
 
                 <div className="tags-stars-container">
                     
-                <StyledTagsContainer className="tags-container">
-                    
-                    {el.tags.map(tag => <StyledTags className="tags">{tag}</StyledTags>)}
-
-
-                </StyledTagsContainer>
-                <Stars rating={el.rating}/>
+                
+                
 
                 </div>
                 
@@ -84,7 +76,7 @@ export function FicheLogement (){
                         
                     
                         <Collapse name={"Équipements"}  width={"500px"} >
-                            <ul>
+                            <ul className="collapsed-ul">
                                 {el.equipments.map((equipement)=>{
                                     return <li>{equipement}</li>
                                 })}
@@ -110,6 +102,6 @@ export function FicheLogement (){
         
 
         
-    </div>
+    </main>
     )
 }

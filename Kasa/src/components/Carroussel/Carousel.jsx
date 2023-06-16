@@ -39,16 +39,16 @@ export function Caroussel({picture , tableOfPictures }){
     
     const [index , setIndex] = useState(0)
 
-    const handleIndexNext = ()=>{
-        setIndex( index < (tableOfPictures.length)-1 ? index +1 : 0  )
-    }
+    const handleIndexNext = () => {
+        setIndex(index < tableOfPictures.length - 1 ? index + 1 : 0);
+      }
+      
 
-    const handleIndexPrevious = () =>{
-        setIndex( index-1 <0 ? (tableOfPictures.length)-1 : index-1)
-    }
-    setTimeout(()=>{
-        setIndex( index < (tableOfPictures.length)-1 ? index +1 : 0  ) 
-    },3000)
+      const handleIndexPrevious = () => {
+        setIndex(index > 0 ? index - 1 : tableOfPictures.length - 1);
+      }
+      
+    
     let PictureOfIndex = tableOfPictures[index]
 
     return (
@@ -56,7 +56,8 @@ export function Caroussel({picture , tableOfPictures }){
             <StyledImg BgImages={PictureOfIndex} className="caroussel-pictures"> 
             <StyledPrevious className="vector-previous" onClick={()=>{handleIndexPrevious()}}  src={previousVector} alt="previous"></StyledPrevious>
             <StyledNext className="vector-next" onClick={()=>{handleIndexNext()}} src={nextVector} alt="next"></StyledNext>
-            <StyledCrawlerPictures className="crawler-pics">{`${index}/${(tableOfPictures.length)-1}`}</StyledCrawlerPictures>
+            <StyledCrawlerPictures className="crawler-pics">{`${index + 1}/${tableOfPictures.length}`}</StyledCrawlerPictures>
+
             </StyledImg>
             
             

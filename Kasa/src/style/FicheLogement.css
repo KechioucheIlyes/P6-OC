@@ -1,18 +1,16 @@
-.testt {
-  border: 1px solid black;
-}
-
-.tags-stars-container {
-  display: flex;
-  justify-content: space-between;
-}
-
 @media screen and (max-width: 768px) {
   .tags {
     padding: 2.16px 23px 1.84px 22.07px !important;
     font-size: 14px !important;
+    margin: 5px;
+    margin-left: -4px;
   }
   .forSee {
     flex-direction: column;
+  }
+  .collapsed-ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
 }/*# sourceMappingURL=FicheLogement.css.map */

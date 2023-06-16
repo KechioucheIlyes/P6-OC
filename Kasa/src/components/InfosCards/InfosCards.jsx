@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import "../../style/InfosCards/InfosCards.css"
+import { Stars } from "../Stars/Stars"
 
 const StyledImgHost = styled.img`
         border-radius : 50%;
@@ -18,18 +19,37 @@ const StyledNameHost = styled.p`
     font-size : 18px;
     width : 93px;
 `
-export function InfosCards({title , location , hostName , hostPicture }){
+const StyledTagsContainer = styled.div`
+
+    display: flex;
+    flex-wrap : wrap;
+    
+
+`
+export function InfosCards({title , location , hostName , hostPicture , stars , tags }){
     
     return (
         <div className="infos-cards-container" >
             <div >
                 <StyledTitle >{title}</StyledTitle>
                 <StyledLocation>{location}</StyledLocation>
+                <StyledTagsContainer className="tags-container">
+                    {tags}
+                </StyledTagsContainer>
+                
             </div>
-            <div className="host-container">
-                <StyledImgHost src={hostPicture} alt={`picture of ${hostName}`}></StyledImgHost>
-                <StyledNameHost>{hostName}</StyledNameHost>
+            <div className="Host-star-container">
+                <div className="host-container">
+                    <StyledImgHost src={hostPicture} alt={`picture of ${hostName}`}></StyledImgHost>
+                    <StyledNameHost>{hostName}</StyledNameHost>
+                    
+                </div>
+                <div className="star-container">
+                    <Stars  rating ={stars}/>
+                </div>
+                
             </div>
+            
             
             
             

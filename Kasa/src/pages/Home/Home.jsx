@@ -8,13 +8,20 @@ export function Home(){
     const title = "Chez vous, Partout et ailleurs"
     
     return(
-        <div>
+        <main>
+            <div >
             <Presentation picture={pictureMontagne} text={title}/>
-            <div className="card-container">
-                {dataLogement.map((el) =>{
+            
+               
+            
+        </div>
+
+        <div className="card-container">
+             {dataLogement.map((el) =>{
                     return <Cards key={el.id} pictures={el.cover} id={el.id} title={el.title} />
                 })}
-            </div>
         </div>
+        </main>
+        
     )
 }
