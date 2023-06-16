@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
 
+
     .host-container {
         display: flex;
         flex-direction: row-reverse;
@@ -13,7 +14,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            border: 1px solid black;
+
         }
     }
 }

@@ -26,6 +26,18 @@ const StyledCard = styled.div`
     url(${(props) => props.BG}) no-repeat center center;
   background-size: cover;
 
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
+  }
+
+  &:not(:hover) {
+    transform: scale(1);
+    transition: transform 0.3s ease;
+  }
+
   @media screen and (max-width: 768px) {
     margin: 0;
     margin-top: 20px;
@@ -33,6 +45,8 @@ const StyledCard = styled.div`
     height: 255px;
   }
 `;
+
+
 
 const StyledLink = styled(Link)`
   display: flex;
