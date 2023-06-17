@@ -32,7 +32,7 @@ const StyledCollapse = styled.div`
   display: flex;
   justify-content: space-between;
   width: ${props => (props.width ? props.width : 'auto')};
-  border: 1px solid black;
+  
 
   img {
     transition: transform 0.3s ease-in-out;
@@ -64,7 +64,7 @@ const StyledCollapseInfos = styled.div`
   @media screen and (max-width: 768px) {
     min-width: 82%;
     max-width: 150px;
-    border: 2px solid blue;
+    
   }
 `;
 

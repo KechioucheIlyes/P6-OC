@@ -23,7 +23,7 @@ const StyledTags = styled.div`
 const StyledCollapse = styled.div`
     display: flex;
     justify-content : space-between;
-    border: 1px solid black;
+    
     
 `
 
