@@ -68,7 +68,7 @@ const StyledText = styled.div`
 `;
 
 export function Cards({ pictures, title, id }) {
-  const [ids, setIds] = useState();
+  
 
   let { locationId } = useParams();
   locationId = id;

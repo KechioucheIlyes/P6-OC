@@ -36,16 +36,13 @@ export function FicheLogement (){
 
     console.log(filtredElement)
     
-    
-
     return (<main>
         {filtredElement.map((el , index)=>{
             return (
                 <div key={el.id}>
                     
                 <div>
-                
-                    
+
                 <Caroussel picture= {el.cover}  tableOfPictures={el.pictures}/>
                 
                 <InfosCards 
