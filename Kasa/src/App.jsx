@@ -13,19 +13,20 @@ import styled from "styled-components"
 
 function App() {
 
-  
   return (
     <Router>
       <NavBar />
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/propos" element={<Propos/>} />
-        <Route path="/fiche-logement/:locationId" element={<FicheLogement/>} />
+        <Route path={"locationId" ?"/fiche-logement/:locationId" : "*"} element={<FicheLogement/>} />
+        <Route path="/error" element={<Error />} />
         <Route path="*"  element={ <Error/> }/>
       </Routes>
       <Footer/>
     </Router>
   )
+
 }
 
 export default App

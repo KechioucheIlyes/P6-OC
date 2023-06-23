@@ -72,16 +72,19 @@ export function Cards({ pictures, title, id }) {
 
   let { locationId } = useParams();
   locationId = id;
+  
+  
 
   return (
     <>
       <StyledCardContainer>
         <StyledCard BG={pictures}>
-          <StyledLink to={`/fiche-logement/${locationId}`}>
+          <StyledLink  to={locationId ?  `/fiche-logement/${locationId}` : `*`}>
             <StyledText>{title ? title : null}</StyledText>
           </StyledLink>
         </StyledCard>
       </StyledCardContainer>
+      
     </>
   );
 }

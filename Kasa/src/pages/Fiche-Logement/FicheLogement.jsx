@@ -1,5 +1,5 @@
 import { Caroussel } from "../../components/Carroussel/Carousel"
-import { useParams } from "react-router"
+import { useNavigate, useParams } from "react-router"
 import { dataLogement } from "../../utils/DataLogement/DataLogement";
 import { InfosCards } from "../../components/InfosCards/InfosCards";
 import styled from "styled-components";
@@ -31,12 +31,17 @@ const StyledCollapse = styled.div`
 
 export function FicheLogement (){
     const {locationId} =useParams()
-    
+    const navigate = useNavigate();
     const filtredElement = dataLogement.filter(el => el.id === locationId)
+
+    
+    filtredElement.length === 0  ?  location.href = "/*" : null
+
 
     console.log(filtredElement)
     
-    return (<main>
+    return(  <main>
+        
         {filtredElement.map((el , index)=>{
             return (
                 <div key={el.id}>
@@ -100,5 +105,5 @@ export function FicheLogement (){
 
         
     </main>
-    )
+    ) 
 }
