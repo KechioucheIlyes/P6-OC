@@ -31,7 +31,7 @@ const StyledCollapse = styled.div`
 
 export function FicheLogement (){
     const {locationId} =useParams()
-    const navigate = useNavigate();
+    
     const filtredElement = dataLogement.filter(el => el.id === locationId)
 
     
