@@ -14,7 +14,7 @@ const LinkStyled = styled(Link)`
 
 export function NavBar() {
   const location = useLocation();
-  const [currentRoute, setCurrentRoute] = useState(location.pathname);
+  const [currentRoute, setCurrentRoute] = useState();
 
   useEffect(() => {
     setCurrentRoute(location.pathname);

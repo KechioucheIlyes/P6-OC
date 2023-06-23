@@ -39,9 +39,9 @@ export function FicheLogement (){
     
 
     return (<main>
-        {filtredElement.map((el)=>{
+        {filtredElement.map((el , index)=>{
             return (
-                <div>
+                <div key={el.id}>
                     
                 <div>
                 
@@ -77,8 +77,8 @@ export function FicheLogement (){
                     
                         <Collapse name={"Équipements"}  width={"90%"} >
                             <ul className="collapsed-ul">
-                                {el.equipments.map((equipement)=>{
-                                    return <li>{equipement}</li>
+                                {el.equipments.map((equipement , index)=>{
+                                    return <li key={index}>{equipement}</li>
                                 })}
                             </ul>
                         </Collapse>

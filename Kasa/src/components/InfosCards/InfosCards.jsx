@@ -26,7 +26,7 @@ const StyledTagsContainer = styled.div`
     
 
 `
-export function InfosCards({title , location , hostName , hostPicture , stars , tags }){
+export function InfosCards({title , location , hostName , hostPicture , stars , tags ,keyForTag }){
     
     return (
         <div className="infos-cards-container" >

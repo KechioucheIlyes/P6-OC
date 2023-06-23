@@ -15,12 +15,12 @@ export function Stars({rating}){
     const numberOfUncoloredStars = 5-rating
     return( 
         <div>
-            {range.map((element)=>
-                rating >= element ? <StyledStar src={coloredStar} alt="star"></StyledStar> : null
+            {range.map((element, index)=>
+                rating >= element ? <StyledStar key={index} src={coloredStar} alt="star"></StyledStar> : null
                 
             )}{
-                    range.map((element => 
-                        numberOfUncoloredStars >= element ? <StyledStar src={uncoloredStar}  alt="star"></StyledStar> : null
+                    range.map(((element, index) => 
+                        numberOfUncoloredStars >= element ? <StyledStar key={index} src={uncoloredStar}  alt="star"></StyledStar> : null
                         )) 
                     }
         </div>

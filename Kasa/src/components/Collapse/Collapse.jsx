@@ -32,11 +32,10 @@ const StyledCollapse = styled.div`
   display: flex;
   justify-content: space-between;
   width: ${props => (props.width ? props.width : 'auto')};
-  
 
   img {
-    transition: transform 0.3s ease-in-out;
-    animation: ${props => (props.rotate ? rotateAnimation : rotateAnimationReverse)} 0.3s forwards;
+    transition: transform 0.3s ease;
+    transform: ${props => (props.rotate ? 'rotate(180deg)' : 'rotate(0deg)')};
   }
 
   @media screen and (max-width: 768px) {
@@ -50,6 +49,7 @@ const StyledCollapse = styled.div`
     }
   }
 `;
+
 
 const StyledCollapseInfos = styled.div`
   padding: 10px 20px 10px 15px;
@@ -77,39 +77,28 @@ const StyledContainer = styled.div`
 `;
 
 export function Collapse({ name, content, width, children }) {
-    const [vectorUp, setVectorUp] = useState(true);
-    const [rotate, setRotate] = useState(false);
-    const [rotateReverse, setRotateReverse] = useState(false);
-  
-    useEffect(() => {
-      if (vectorUp) {
-        setRotate(false);
-        setRotateReverse(true);
-      } else {
-        setRotate(true);
-        setRotateReverse(false);
-      }
-    }, [vectorUp]);
-  
-    const handleClick = () => {
-      setVectorUp(!vectorUp);
-    };
-  
-    return (
-      <StyledContainer widthinfos={width}>
-        <StyledCollapse width={width} rotate={rotate} rotateReverse={rotateReverse}>
-          {name}
-          <img onClick={handleClick} src={vector} alt="vecteur" />
-        </StyledCollapse>
-        {vectorUp ? null : (
-          <StyledCollapseInfos className="tes" widthinfos={width}>
-            <div>
-              {content}
-              {children}
-            </div>
-          </StyledCollapseInfos>
-        )}
-      </StyledContainer>
-    );
-  }
+  const [vectorUp, setVectorUp] = useState(true);
+
+  const handleClick = () => {
+    setVectorUp(!vectorUp);
+  };
+
+  return (
+    <StyledContainer widthinfos={width}>
+      <StyledCollapse width={width} rotate={!vectorUp}>
+        {name}
+        <img onClick={handleClick} src={vector} alt="vecteur" />
+      </StyledCollapse>
+      {vectorUp ? null : (
+        <StyledCollapseInfos className="tes" widthinfos={width}>
+          <div>
+            {content}
+            {children}
+          </div>
+        </StyledCollapseInfos>
+      )}
+    </StyledContainer>
+  );
+}
+
   

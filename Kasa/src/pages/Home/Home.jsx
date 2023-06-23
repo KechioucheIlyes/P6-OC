@@ -11,9 +11,6 @@ export function Home(){
         <main>
             <div >
             <Presentation picture={pictureMontagne} text={title}/>
-            
-               
-            
         </div>
 
         <div className="card-container">
