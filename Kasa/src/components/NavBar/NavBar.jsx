@@ -18,6 +18,7 @@ export function NavBar() {
 
   useEffect(() => {
     setCurrentRoute(location.pathname);
+    
   }, [location.pathname]);
 
   return (
